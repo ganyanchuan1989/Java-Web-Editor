@@ -88,7 +88,7 @@ npm start
 > - when you create an instance of the Monaco editor you should provide a file URI
 > - the second, you can provide a workspace URI when you create Monaco services:
 
-我这边的做法是参考上面的方案1，在java-languageserver 所在服务器上创建一个model.java文件，前端编辑器创建的时候，Uri设置为服务器上model.java文件路径，进而绕过去，详见：`MonacoEditor.jsx`：
+我这边的做法是参考上面的方案1，在java-languageserver 所在服务器上创建一个Model.java文件，前端编辑器创建的时候，Uri设置为服务器上Model.java文件路径，进而绕过去，详见：`MonacoEditor.jsx`：
 
 ```jsx
 const JAVA_TEMPLATE_PATH = "/opt/java-languageserver-master/Model.java";
@@ -101,6 +101,17 @@ let model = monaco.editor.getModel(monaco.Uri.file(JAVA_TEMPLATE_PATH));
         monaco.Uri.file(JAVA_TEMPLATE_PATH)
       );
     }
+```
+
+Model.java
+```java
+package test;
+
+public class Model {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+}
 ```
 
 当日志出现如下关键字，标识智能感知（intellisense）已经生效。

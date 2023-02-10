@@ -6,6 +6,8 @@ Java Web 编辑器，支持智能感知（intellisense）。前端基于React，
 
 ## 效果图
 
+demo.gif有点大，有可能github的README.md显示不出来，请查看：`imgs\demo.gif`。
+
 ![](imgs\demo.gif)
 
 
@@ -103,7 +105,7 @@ let model = monaco.editor.getModel(monaco.Uri.file(JAVA_TEMPLATE_PATH));
 
 当日志出现如下关键字，标识智能感知（intellisense）已经生效。
 
-![image-20230206152612386](D:\workspace\js_ide\imgs\image-20230206152612386.png)
+![image-20230206152612386](.\imgs\image-20230206152612386.png)
 
 ### 内网部署
 
